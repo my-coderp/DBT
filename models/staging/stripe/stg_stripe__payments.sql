@@ -7,4 +7,4 @@ select
     created as date
     
 
-from dbt-tutorial.stripe.payment
+from {{ source('stripe', 'payment') }}
