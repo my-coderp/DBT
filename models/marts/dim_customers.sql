@@ -10,6 +10,7 @@ select * from {{ ref('stg_jaffle_shop__orders') }}
 
 ),
 
+-- use to calculate lifetime value, so need to filter out any failed payments and only use successful ones
 payments as (
 
 select * from {{ ref('stg_stripe__payment') }} where status like 'success'
