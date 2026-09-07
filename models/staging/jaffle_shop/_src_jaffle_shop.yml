@@ -1,7 +1,6 @@
 sources:
   - name: jaffle_shop
     database: dbt-tutorial 
-    schema: jaffle_shop  
     tables:
       - name: orders
         config:
@@ -15,8 +14,4 @@ sources:
           loaded_at_field: _etl_loaded_at
       - name: customers
 
-  - name: stripe
-    database: dbt-tutorial 
-    schema: stripe 
-    tables:
-      - name: payment
+
