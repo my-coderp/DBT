@@ -1,3 +1,8 @@
+{{ config(
+    database='dbt-datalake',
+    schema='gold_dim_customer'
+) }}
+
 with customers as (
 
 select * from {{ ref('stg_jaffle_shop__customers') }}

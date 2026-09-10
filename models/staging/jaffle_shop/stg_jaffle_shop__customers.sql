@@ -1,3 +1,8 @@
+{{ config(
+    database='dbt-datalake',
+    schema='bronze_jaffle_customers'
+) }}
+
     select
         id as customer_id,
         first_name,

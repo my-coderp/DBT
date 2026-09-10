@@ -1,6 +1,9 @@
-with 
+{{ config(
+    database='dbt-datalake',
+    schema='bronze_stripe_payments'
+) }}
 
-source as (
+with source as (
 
     select * from {{ source('stripe', 'payment') }}
 

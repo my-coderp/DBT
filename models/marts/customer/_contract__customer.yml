@@ -1,0 +1,42 @@
+models:
+  - name: customer_profile
+    group: customer
+    config:
+      contract: 
+        enforced: true
+    columns:
+      - name: customer_id
+        description: Unique id to reference the customer
+        data_type: float
+        constraints:
+          - type: not_null
+      - name: first_name
+        description: customer first name
+        data_type: string
+        constraints:
+          - type: not_null
+      - name: last_name
+        description: customer last name (surname)
+        data_type: string
+        constraints:
+          - type: not_null
+      - name: first_order_date
+        description: date of the first order placed by the customer
+        data_type: date
+        constraints:
+          - type: not_null
+      - name: most_recent_order_date
+        description: date of the most recent order placed by the customer
+        data_type: date
+        constraints:
+          - type: not_null
+      - name: number_of_orders
+        description: total number of orders placed by the customer during the lifetime (calculated)
+        data_type: float
+        constraints:
+          - type: not_null
+      - name: lifetime_value
+        description: sum of order all customer order amounts (calculated)
+        data_type: float
+        constraints:
+          - type: not_null
